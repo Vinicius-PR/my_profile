@@ -56,7 +56,8 @@ export const Main = styled.div`
     }
     ul {
         display: flex;
-
+        align-items: center;
+        justify-content: center;
         li {
             margin-left: 2rem;
 
@@ -66,7 +67,7 @@ export const Main = styled.div`
             align-items: center;
             flex: 2.5;
             li {
-                margin: 1.5rem 0;
+                margin: 1rem 0;
             }
         }
     }
@@ -74,13 +75,13 @@ export const Main = styled.div`
     .switch_container {
         width: 18%;
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
 
         @media (max-width: 768px) {
             flex-direction: column;
             align-items: center;
             flex: 1;
-            margin-bottom: 2rem;
+            margin-bottom: 8rem;
             margin-left: auto;
             margin-right: auto;
         }
