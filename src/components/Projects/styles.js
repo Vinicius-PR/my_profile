@@ -6,7 +6,6 @@ export const Container = styled.section`
     margin: 0 auto;
     margin-top: 2rem;
     position: relative;
-    z-index: -1;
 
     h1 {
         text-align: center;
