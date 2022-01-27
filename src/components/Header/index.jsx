@@ -45,7 +45,7 @@ const Header = ({ handleThemeToggle }) => {
     return (
         <Container>
             <Content>
-                <Logo>Vinicius PR</Logo>
+                <Logo><a href="/">Vinicius PR</a></Logo>
 
                 <Main isMenuOpen={ isMenuOpen }>
                     <ul>

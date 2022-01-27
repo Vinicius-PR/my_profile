@@ -28,6 +28,10 @@ export const Logo = styled.h1`
     display: flex;
     font-family: 'Dancing Script', cursive;
     font-weight: 700;
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
 `;
 
 export const Main = styled.div`
