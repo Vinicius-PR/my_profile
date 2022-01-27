@@ -30,7 +30,7 @@ const Skills = () => {
                 </div>
 
                 <div>
-                    <h3>{language === 'portuguese' ?  'Estudando' : 'Studinng'}</h3>
+                    <h3>{language === 'portuguese' ?  'Estudando' : 'Studying'}</h3>
                     <img src={typeImg} alt="TypeScript" title='TypeScript'/>
                     <img src={graphImg} alt="Graphql" title='Graphql'/>
                 </div>
