@@ -6,7 +6,7 @@ import LanguageContext from '../../context/Language';
 const text = {
     portuguese: {
         title: 'Oi, Me chamo Vinicius',
-        about: 'Sou programador Front End Júnior. Tenho 28 anos e sou formado em técnino em Informática e também em Automação Industrial. Cheguei a começar faculdade de física bacharelado porém não completei. Apesar de gostar de física, percebi que o meu caminho é com a tecnologia. Começei a estudar sozinho, fazendo bootcamps e cursos na udemy. Hoje tenho uma bagagem suficiente para começar nesse mercado da programação web. Meu foco é começar como Júnior, assim como vários começaram. Estou sempre programando e estudando para não ficar para trás. Na minha horas vagas gosto de assistir séries e também de jogar jogos online RPG.'
+        about: 'Sou programador Front End Júnior. Tenho 28 anos, sou formado em técnico de Informática e também em Automação Industrial. Cheguei a começar faculdade de física bacharelado, porém, não completei. Apesar de gostar de física, percebi que o meu caminho é com a tecnologia. Comecei a estudar sozinho, fazendo bootcamps e cursos na udemy. Hoje tenho uma bagagem suficiente para começar nesse mercado da programação web. Meu foco é começar como Júnior, assim como vários começaram. Estou sempre programando e estudando para não ficar para trás. Nas minhas horas vagas, gosto de assistir séries e também de jogar jogos online RPG.'
     },
     english: {
         title: 'Hi, my name is Vinicius',
