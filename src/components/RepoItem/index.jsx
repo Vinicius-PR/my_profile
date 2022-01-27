@@ -30,11 +30,10 @@ const RepoItem = ({ repository }) => {
             <div className='languages'>
                 {
                     languages.map((lang) => (
-                        <span className='languages_item'>{ lang }</span>
+                        <span key={lang} className='languages_item'>{ lang }</span>
                     ))
                 }
             </div>
-
         </Container>
     );
 };

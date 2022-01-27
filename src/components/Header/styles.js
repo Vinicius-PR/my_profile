@@ -4,6 +4,7 @@ export const Container = styled.header`
     background-color: ${props => props.theme.colors.bg_header};
     color: ${props => props.theme.colors.text_header};
     height: 90px;
+    z-index: 10;
     @media (max-width: 768px) {
         position: fixed;
         display: block;
@@ -25,6 +26,8 @@ export const Content = styled.section`
 export const Logo = styled.h1`
     font-size: 1.5rem;
     display: flex;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
 `;
 
 export const Main = styled.div`

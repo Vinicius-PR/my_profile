@@ -16,7 +16,6 @@ const text = {
 
 const AboutMe = () => {
     const { language } = useContext(LanguageContext);
-    console.log(language)
     return (
         <Container id='about'>
             <h1>Vinicius Paula Resende</h1>

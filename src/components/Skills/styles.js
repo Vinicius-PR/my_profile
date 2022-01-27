@@ -8,7 +8,6 @@ export const Container = styled.section`
     background-color: #ECDFC1;
     text-align: center;
     position: relative;
-    z-index: -1;
     
     @media (max-width: 768px) {
         padding: 1rem 2rem;

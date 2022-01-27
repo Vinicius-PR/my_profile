@@ -15,7 +15,7 @@ export default createGlobalStyle`
     body {
         background: ${props => props.theme.colors.background_body};
         color: ${props => props.theme.colors.text};;
-        font-family: sans-serif;
+        font-family: 'Roboto', sans-serif;
         padding-bottom: 100px;
     }
 

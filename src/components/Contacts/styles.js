@@ -7,7 +7,6 @@ export const Container = styled.section`
     margin-top: 2rem;
     text-align: center;
     position: relative;
-    z-index: -1;
     
     @media (max-width: 768px) {
         padding: 1rem 2rem;
