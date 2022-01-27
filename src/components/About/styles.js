@@ -12,6 +12,11 @@ export const Container = styled.section`
             margin-top: 60px;
         }
     }
+
+    @media(max-width: 768px) {
+        padding-left: 0rem;
+        padding-right: 0rem;
+    }
 `;
 
 export const Content = styled.div`
@@ -21,6 +26,7 @@ export const Content = styled.div`
         grid-template-columns: 1fr;
     }
 `;
+
 export const About = styled.div`
     display: flex;
     flex-direction: column;
@@ -38,7 +44,6 @@ export const About = styled.div`
     }
 `;
 
-
 export const ImageContainer = styled.div`
     display: flex;
     justify-content: center;
@@ -48,7 +53,6 @@ export const ImageContainer = styled.div`
         height: 350px;
         object-fit: cover;
         object-position: top;
-        /* transform: translateX(10px); */
         border-radius: 50%;
         margin: 0 auto;
         @media (max-width: 768px) {
@@ -59,6 +63,10 @@ export const ImageContainer = styled.div`
         @media (max-width: 425px) {
             width: 250px;
             height: 250px;
+        }
+        @media (max-width: 319px) {
+            width: 200px;
+            height: 200px;
         }
     }
 `;
