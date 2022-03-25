@@ -13,6 +13,7 @@ import { LanguageProvider } from './context/Language';
 import Skills from './components/Skills';
 import Contacts from './components/Contacts/Index';
 import Scroll from './components/Scroll/Index';
+import Education from './components/Education';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -40,7 +41,8 @@ function App() {
         <GlobalStyle/>
         <Header handleThemeToggle={handleThemeToggle} />
         <AboutMe />
-        <Projects/>
+        <Projects />
+        <Education/>
         <Skills />
         <Contacts/>
       </LanguageProvider>

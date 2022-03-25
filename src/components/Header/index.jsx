@@ -45,7 +45,7 @@ const Header = ({ handleThemeToggle }) => {
     return (
         <Container>
             <Content>
-                <Logo><a href="#">Vinicius PR</a></Logo>
+                <Logo>Vinicius PR</Logo>
 
                 <Main isMenuOpen={ isMenuOpen }>
                     <ul>
@@ -60,6 +60,11 @@ const Header = ({ handleThemeToggle }) => {
                             </Link>
                         </li>
                         <li>
+                            <Link href='#education' onClick={handleMenuToggle}>
+                                {language === 'portuguese' ? 'Educação' : 'Education'}
+                            </Link>
+                        </li>
+                        <li>
                             <Link href='#skills' onClick={handleMenuToggle}>
                                 {language === 'portuguese' ? 'Habilidades' : 'Skills'}
                             </Link>
@@ -69,6 +74,7 @@ const Header = ({ handleThemeToggle }) => {
                                 {language === 'portuguese' ? 'Contato' : 'contacts'}
                             </Link>
                         </li>
+                        
                     </ul>
                     <div className="switch_container">
                         <Switch
