@@ -1,4 +1,4 @@
-export default {
+const dark = {
     title: 'dark',
     colors: {
         primary: '#FF934F',
@@ -17,3 +17,5 @@ export default {
         bg_color_repo: "#665429",
     }
 }
+
+export default dark;
