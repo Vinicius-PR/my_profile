@@ -1,7 +1,6 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import { Container } from './style';
 import LanguageContext from '../../context/Language';
-import { useContext } from 'react/cjs/react.development';
 
 const text = {
   portuguese: {
