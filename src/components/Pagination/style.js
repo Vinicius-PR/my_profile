@@ -5,7 +5,8 @@ export const Container = styled.div`
 `;
 
 export const Dots = styled.p`
-    color: #F7ECDE;
+    /* color: #F7ECDE; */
+    color: ${props => props.theme.colors.color_dots};
     display: inline-flex;
     justify-content: center;
     align-self: center;

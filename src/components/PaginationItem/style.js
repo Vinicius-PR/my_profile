@@ -17,18 +17,4 @@ export const Container = styled.p`
     color: black;
     background-color: ${props => props.color};
     border: 1px solid black;
-
-    @media (max-width: 376px) {
-        font-size: 1rem;
-        width: 1.6rem;
-        height: 1.6rem;
-    }
-
-    @media (max-width: 300px) {
-        font-size: 1rem;
-        width: 1.3rem;
-        height: 1.3rem;
-        padding: 0.10rem;
-        margin: 0 0.15rem;
-    }
 `;

@@ -17,9 +17,11 @@ const Projects = () => {
             });
     }, []);
 
-    const numberOfPages = Math.ceil(projetcs.length/10);
-    let start_index = (page * 10) - 10
-    let stop_index = page * 10
+    const quantityToShow = 6;
+
+    const numberOfPages = Math.ceil(projetcs.length/quantityToShow);
+    let start_index = (page * quantityToShow) - quantityToShow;
+    let stop_index = page * quantityToShow;
 
     return (
         <Container>

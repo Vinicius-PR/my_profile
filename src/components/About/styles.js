@@ -34,8 +34,6 @@ export const About = styled.div`
     justify-content: center;
     h3 {
         padding-bottom: 1rem;
-        color: ${props => props.theme.colors.primary};
-
     }
     p{
         text-align: justify;

@@ -25,6 +25,7 @@ const RepoItem = ({ repository }) => {
                 {repository.name}
             
             </h3>
+            
             <p>{repository.description}</p>
 
             <div className='languages'>

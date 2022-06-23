@@ -1,4 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
+const primaryColor = '#FF8133';
 
 export default createGlobalStyle`
     * {
@@ -21,5 +22,13 @@ export default createGlobalStyle`
 
     li {
         list-style: none;
+    }
+
+    h1 {
+        color: ${primaryColor};
+    }
+    
+    h2 {
+        color: ${primaryColor};
     }
 `

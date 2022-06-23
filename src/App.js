@@ -14,6 +14,7 @@ import Skills from './components/Skills';
 import Contacts from './components/Contacts/Index';
 import Scroll from './components/Scroll/Index';
 import Education from './components/Education';
+import Presentation from './components/Presentation/Presentation';
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -40,6 +41,7 @@ function App() {
         <Scroll/>
         <GlobalStyle/>
         <Header handleThemeToggle={handleThemeToggle} />
+        <Presentation/>
         <AboutMe />
         <Projects />
         <Education/>

@@ -10,24 +10,25 @@ export const Container = styled.section`
     h1 {
         text-align: center;
         margin: 2rem 0;
-        color: ${props => props.theme.colors.primary};
-
     }
     #projects {
         position: absolute;
         @media(max-width: 768px) {
-            top: -65px;
+            top: -50px;
         }
     }
 `;
 
 export const Content = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 1rem 0;
 
     @media (max-width: 768px) {
-        display: flex;
-        flex-direction: column;
+        grid-template-columns: 1fr 1fr;
     }
-    
+
+    @media (max-width: 568px) {
+        grid-template-columns: 1fr;
+    }
 `;

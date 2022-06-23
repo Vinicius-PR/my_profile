@@ -8,9 +8,12 @@ export const Container = styled.a`
     text-decoration: none;
     color: inherit;
 
-    p{
-        margin: 0.35rem 0;
-    }
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    min-height: 13rem;
+    transition: all 0.2s ease-in;
 
     .languages {
         display: flex;
@@ -18,11 +21,16 @@ export const Container = styled.a`
     }
 
     .languages_item {
-        background-color: ${props => props.theme.colors.primary_modified};
+        background-color: ${props => props.theme.colors.bg_color_lang};
         padding: 0.25rem;
         border-radius: 0.75rem;
         margin-right: 0.25rem;
         margin-top: 0.25rem;
+    }
+
+    &:hover {
+        background-color: ${props => props.theme.colors.bg_color_repo_hover};
+        transform: scale(1.02);
     }
 `;
 

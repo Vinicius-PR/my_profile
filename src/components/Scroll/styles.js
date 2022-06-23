@@ -9,7 +9,7 @@ export const ScrollContainer = styled.div`
     right: 2rem;
     height: 2.5rem;
     width: 2.5rem;
-    background-color: ${props => props.theme.colors.primary};
+    background-color: orange;
     border-radius: 50%;
     cursor: pointer;
     visibility: hidden;

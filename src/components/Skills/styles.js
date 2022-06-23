@@ -3,51 +3,72 @@ import styled from "styled-components";
 export const Container = styled.section`
     max-width: 1440px;
     padding: 1rem 7rem;
-    margin: 0 auto;
     margin-top: 2rem;
     background-color: #ECDFC1;
-    text-align: center;
     position: relative;
+    color: black;
     
     @media (max-width: 768px) {
         padding: 1rem 2rem;
     }
 
     h1 {
+        text-align: center;
         margin: 2rem 0;
-        color: ${props => props.theme.colors.primary};
     }
-
+    
+    /* To fix the position of the id span when on mobile */
     #skills {
         position: absolute;
         @media(max-width: 768px) {
-            top: -65px;
+            top: -45px;
         }
     }
 `;
 
-export const Content = styled.div`
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 2rem;
+export const Knowledge = styled.div`
+    text-align: center;
+    margin: 0 auto;
+    width: 30%;
+    margin-top: 2rem;
+    
+
     @media (max-width: 768px) {
-        grid-template-columns: 1fr;
-        grid-gap: 1rem;
+        width: 40%;
+    }
+
+    @media (max-width: 500px) {
+        width: 100%;
+    }
+
+    h3 {
+        margin-bottom: 0.5rem;
     }
 
     div {
-        h3 {
-            padding-bottom: 1rem;
-            color: ${props => props.theme.colors.subtitle};
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s ease-in;
+        cursor: pointer;
+
+        img {
+            width: 1.8rem;
         }
-    }
-    img {
-        width: 35px;
-        margin: 0 0.20rem;
-        transition: transform 0.2s;
+
+        p {
+            margin-left: 0.4rem;
+        }
+
         &:hover {
-            transform: translateY(-10px);
-            box-shadow: #e65c00;
+            transform: scale(1.03);
         }
     }
+
+`;
+
+export const Content = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 1rem;
 `;
