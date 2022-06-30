@@ -41,6 +41,7 @@ const Contacts = () => {
         e.preventDefault();
 
         SetIsSendingEmail(true);
+        setIsSendSuccess('');
         emailjs.sendForm('service_m6p56sa', 'template_v2ry0cn', form.current, '33nMEAKsqQKup-Qq9')
             .then((result) => {
                 console.log(result.text);
