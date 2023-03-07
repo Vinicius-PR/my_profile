@@ -1,20 +1,31 @@
 {
   "files": {
-    "main.js": "/my_profile/static/js/main.326dc48c.js",
+    "main.css": "/my_profile/static/css/main.5df983c8.css",
+    "main.js": "/my_profile/static/js/main.9d7b0403.js",
+    "static/media/rickAndMorty.png": "/my_profile/static/media/rickAndMorty.f7e2295a7bf4ed0d3676.png",
+    "static/media/galleryWithZoom.png": "/my_profile/static/media/galleryWithZoom.89ac724266306bdbf101.png",
+    "static/media/githubBlog.png": "/my_profile/static/media/githubBlog.aa38c8e49200eb222143.png",
+    "static/media/coffeeDelivery.png": "/my_profile/static/media/coffeeDelivery.7011289564915226361f.png",
     "static/media/vinicius.jpeg": "/my_profile/static/media/vinicius.8d89d4df451917555cee.jpeg",
     "static/media/programming.jpg": "/my_profile/static/media/programming.b26906aa0583f6492fd3.jpg",
+    "static/media/igniteShop.png": "/my_profile/static/media/igniteShop.4a5cb3b3c27ba54602a3.png",
     "static/media/sun.png": "/my_profile/static/media/sun.d3bbb517cffac7154c9b.png",
     "static/media/usa.png": "/my_profile/static/media/usa.acc865cd64c3adff1f6c.png",
     "static/media/moon.png": "/my_profile/static/media/moon.9479b3d41c8499112593.png",
     "static/media/brazil.png": "/my_profile/static/media/brazil.3c735d9bb647e7f22870.png",
+    "static/media/dtMoney.png": "/my_profile/static/media/dtMoney.80e41066aec3295bb1e7.png",
     "static/media/php.png": "/my_profile/static/media/php.4990580e9b615aeebb1f.png",
     "static/media/redux.png": "/my_profile/static/media/redux.c9be37e0fece29c624b0.png",
+    "static/media/todoList.png": "/my_profile/static/media/todoList.80ab5a3058b5e3e89167.png",
+    "static/media/circleOnClick.png": "/my_profile/static/media/circleOnClick.7e9a9127cef5aefbbc59.png",
     "static/media/styledComponents.png": "/my_profile/static/media/styledComponents.61b1069d3f60b51e426d.png",
     "static/media/javascript.png": "/my_profile/static/media/javascript.872571c40e8d647ed672.png",
     "index.html": "/my_profile/index.html",
-    "main.326dc48c.js.map": "/my_profile/static/js/main.326dc48c.js.map"
+    "main.5df983c8.css.map": "/my_profile/static/css/main.5df983c8.css.map",
+    "main.9d7b0403.js.map": "/my_profile/static/js/main.9d7b0403.js.map"
   },
   "entrypoints": [
-    "static/js/main.326dc48c.js"
+    "static/css/main.5df983c8.css",
+    "static/js/main.9d7b0403.js"
   ]
 }
