@@ -1,20 +1,21 @@
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from "react";
 
-import Header from './components/Header';
-import AboutMe from './components/About';
-import Projects from './components/Projects';
+import light from "./styles/theme/light";
+import dark from "./styles/theme/dark";
+import GlobalStyle from "./styles/global";
+import { ThemeProvider } from "styled-components";
+import { LanguageProvider } from "./context/Language";
 
-import light from './styles/theme/light';
-import dark from './styles/theme/dark';
-
-import GlobalStyle from './styles/global';
-import { ThemeProvider } from 'styled-components';
-import { LanguageProvider } from './context/Language';
-import Skills from './components/Skills';
-import Contacts from './components/Contacts/Index';
-import Scroll from './components/Scroll/Index';
-import Education from './components/Education';
-import Presentation from './components/Presentation/Presentation';
+// COMPONENTS
+import Header from "./components/Header";
+import AboutMe from "./components/About";
+import PersonalProjects from "./components/PersonalProjects";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contacts from "./components/Contacts/Index";
+import Scroll from "./components/Scroll/Index";
+import Education from "./components/Education";
+import Presentation from "./components/Presentation";
 
 function App() {
   const [theme, setTheme] = useState(() => {
@@ -28,7 +29,7 @@ function App() {
   });
 
   function handleThemeToggle() {
-    setTheme(theme.title === 'light' ? dark : light);
+    setTheme(theme.title === "light" ? dark : light);
   }
 
   useEffect(() => {
@@ -38,15 +39,16 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <LanguageProvider>
-        <Scroll/>
-        <GlobalStyle/>
+        <Scroll />
+        <GlobalStyle />
         <Header handleThemeToggle={handleThemeToggle} />
-        <Presentation/>
+        <Presentation />
         <AboutMe />
+        <PersonalProjects />
         <Projects />
-        <Education/>
+        <Education />
         <Skills />
-        <Contacts/>
+        <Contacts />
       </LanguageProvider>
     </ThemeProvider>
   );

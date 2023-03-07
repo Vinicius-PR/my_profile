@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components';
-const primaryColor = '#FF8133';
+import { createGlobalStyle } from "styled-components";
+const primaryColor = "#FF8133";
 
 export default createGlobalStyle`
     * {
@@ -14,8 +14,8 @@ export default createGlobalStyle`
     }
 
     body {
-        background: ${props => props.theme.colors.background_body};
-        color: ${props => props.theme.colors.text};;
+        background: ${(props) => props.theme.colors.background_body};
+        color: ${(props) => props.theme.colors.text};;
         font-family: 'Roboto', sans-serif;
         padding-bottom: 100px;
     }
@@ -25,10 +25,14 @@ export default createGlobalStyle`
     }
 
     h1 {
+        text-align: center;
+        margin: 1.5rem 0;
         color: ${primaryColor};
     }
-    
+
     h2 {
+        text-align: center;
+        margin: 1rem 0;
         color: ${primaryColor};
     }
-`
+`;

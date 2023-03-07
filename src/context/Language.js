@@ -1,35 +1,36 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState, useEffect } from "react";
 
 const LanguageContext = createContext({});
 
 export const LanguageProvider = ({ children }) => {
-    const [language, setLanguage] = useState(() => {
-        const storageValue = localStorage.getItem("language");
+  const [language, setLanguage] = useState(() => {
+    const storageValue = localStorage.getItem("language");
 
-        if (storageValue) {
-            return storageValue;
-        } else {
-            return 'portuguese';
-        }
-    });
-
-    function hadleLanguageToggle() {
-        setLanguage(language === 'portuguese' ? 'english' : 'portuguese');
+    if (storageValue) {
+      return storageValue;
+    } else {
+      return "english";
     }
+  });
 
-    useEffect(() => {
-        localStorage.setItem("language", language);
-    }, [language])
+  function hadleLanguageToggle() {
+    setLanguage(language === "portuguese" ? "english" : "portuguese");
+  }
 
-    return (
-        <LanguageContext.Provider
-            value={{
-                language, hadleLanguageToggle
-            }}
-        >
-            {children}
-        </LanguageContext.Provider>
-    )
-}
+  useEffect(() => {
+    localStorage.setItem("language", language);
+  }, [language]);
+
+  return (
+    <LanguageContext.Provider
+      value={{
+        language,
+        hadleLanguageToggle,
+      }}
+    >
+      {children}
+    </LanguageContext.Provider>
+  );
+};
 
 export default LanguageContext;

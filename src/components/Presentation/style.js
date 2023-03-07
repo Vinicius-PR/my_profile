@@ -1,13 +1,13 @@
 import styled from "styled-components";
-import img from '../../assets/programming.jpg'
+import img from "../../assets/programming.jpg";
 
-export const Container = styled.div `
+export const Container = styled.div`
   background-image: url(${img});
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  height: calc(100vh - 60px);
+  height: calc(100vh - 90px); //100vh - height of the header
   z-index: -1;
 
   display: flex;
@@ -19,30 +19,28 @@ export const Container = styled.div `
   }
 `;
 
-export const Overlay = styled.div `
+export const Overlay = styled.div`
   height: 60%;
   width: 60%;
 
-  background-color: rgba(99, 85, 78, 0.733);
+  background-color: rgba(99, 85, 78, 0.933);
   text-align: center;
   color: white;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   padding: 0 2rem;
 
-  h1, h2 {
-    margin-bottom: 2rem;
-  };
-
-  h2, p {
+  p {
     font-weight: 600;
+    font-size: 1.3rem;
   }
 
-  p {
-    font-size: 1rem;
+  h1,
+  h2 {
+    margin: 0;
   }
 
   @media (max-width: 768px) {
