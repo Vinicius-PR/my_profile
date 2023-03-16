@@ -116,7 +116,7 @@ const Contacts = () => {
       <Content>
         <div>
           <Link
-            href="https://www.linkedin.com/in/vinicius-p-resende-330266165/"
+            href="https://www.linkedin.com/in/vinicius-paula-resende/"
             target="_blank"
           >
             <h4>Linkedin</h4>
