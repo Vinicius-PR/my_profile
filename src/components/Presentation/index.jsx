@@ -11,7 +11,7 @@ const text = {
       "Programador Front-End. HTML | CSS | JavaScript | TypeScript | React | SASS | Styled-Componets.",
   },
   english: {
-    title: "Junior Programmer",
+    title: "Front-End Programmer",
     subtitle: "Hi, my name is Vinícius",
     paragraph:
       "Front-End Programmer. HTML | CSS | JavaScript | TypeScript | React | SASS | Styled-Componets.",
