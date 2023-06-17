@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/my_profile/static/css/main.5df983c8.css",
-    "main.js": "/my_profile/static/js/main.8ae17b92.js",
+    "main.js": "/my_profile/static/js/main.2b97b6b4.js",
+    "static/media/pousadaMariart.png": "/my_profile/static/media/pousadaMariart.14092a201cde9d3a02fa.png",
     "static/media/rickAndMorty.png": "/my_profile/static/media/rickAndMorty.f7e2295a7bf4ed0d3676.png",
-    "static/media/galleryWithZoom.png": "/my_profile/static/media/galleryWithZoom.89ac724266306bdbf101.png",
     "static/media/githubBlog.png": "/my_profile/static/media/githubBlog.aa38c8e49200eb222143.png",
     "static/media/coffeeDelivery.png": "/my_profile/static/media/coffeeDelivery.7011289564915226361f.png",
     "static/media/vinicius.jpeg": "/my_profile/static/media/vinicius.8d89d4df451917555cee.jpeg",
@@ -22,10 +22,10 @@
     "static/media/javascript.png": "/my_profile/static/media/javascript.872571c40e8d647ed672.png",
     "index.html": "/my_profile/index.html",
     "main.5df983c8.css.map": "/my_profile/static/css/main.5df983c8.css.map",
-    "main.8ae17b92.js.map": "/my_profile/static/js/main.8ae17b92.js.map"
+    "main.2b97b6b4.js.map": "/my_profile/static/js/main.2b97b6b4.js.map"
   },
   "entrypoints": [
     "static/css/main.5df983c8.css",
-    "static/js/main.8ae17b92.js"
+    "static/js/main.2b97b6b4.js"
   ]
 }
