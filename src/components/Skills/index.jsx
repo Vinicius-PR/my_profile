@@ -13,6 +13,7 @@ import styledComponents from "../../assets/skills/styledComponents.png";
 
 import phpImg from "../../assets/skills/php.png";
 import typeImg from "../../assets/skills/typescript.png";
+import nodeImg from "../../assets/skills/node-js.png";
 import reduxImg from "../../assets/skills/redux.png";
 
 import graphImg from "../../assets/skills/graphql.png";
@@ -55,6 +56,10 @@ const Skills = () => {
             <p>JavaScript</p>
           </div>
           <div>
+            <img src={typeImg} alt="TypeScript" title="TypeScript" />{" "}
+            <p>TypeScript</p>
+          </div>
+          <div>
             <img src={cssImg} alt="CSS 3" title="CSS3" /> <p>CSS</p>
           </div>
           <div>
@@ -75,7 +80,7 @@ const Skills = () => {
               src={styledComponents}
               alt="Styled Components"
               title="Styled Components"
-            />{" "}
+            />
             <p>Styled Components</p>
           </div>
         </Knowledge>
@@ -84,11 +89,8 @@ const Skills = () => {
           <h3>{text[language].subtitle_2}</h3>
 
           <div>
-            <img src={phpImg} alt="PHP" title="PHP" /> <p>PHP</p>
-          </div>
-          <div>
-            <img src={typeImg} alt="TypeScript" title="TypeScript" />{" "}
-            <p>TypeScript</p>
+            <img src={nodeImg} alt="NodeJS" title="NodeJS" />
+            <p>NodeJS</p>
           </div>
           <div>
             <img src={reduxImg} alt="Redux" title="Redux" /> <p>Redux</p>

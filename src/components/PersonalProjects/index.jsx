@@ -14,37 +14,45 @@ import {
   SwiperContent,
   ImageSwiper,
   TextSwiper,
+  LinksContainer,
 } from "./styles";
 import LanguageContext from "../../context/Language";
 import { useContext } from "react";
+import { GoRepo } from 'react-icons/go'
+import { LuAppWindow } from 'react-icons/lu'
 
 // Images used on Slides
+import pousadaMariartImg from "../../assets/personal projects screenshots/pousadaMariart.png";
 import circleOnClickImg from "../../assets/personal projects screenshots/circleOnClick.png";
 import igniteShopImg from "../../assets/personal projects screenshots/igniteShop.png";
 import githubBlogImg from "../../assets/personal projects screenshots/githubBlog.png";
 import coffeeDeliveryImg from "../../assets/personal projects screenshots/coffeeDelivery.png";
 import dtMoneyImg from "../../assets/personal projects screenshots/dtMoney.png";
 import todoListImg from "../../assets/personal projects screenshots/todoList.png";
-import galleryWithZoomImg from "../../assets/personal projects screenshots/galleryWithZoom.png";
 import rickAndMortyImg from "../../assets/personal projects screenshots/rickAndMorty.png";
 
 const text = {
   portuguese: {
     title: "Projetos Pessoais",
+    pousadaMariart: {
+      title: "Pousada Mariart",
+      p1: "Esse projeto é um site de uma pousada na cidade de Resende Costa - MG.",
+      p2: "O objetivo desse site é apresentar a pousada para os interessados. Nesse site contém informações sobre a pousada como localização, os serviços prestados e fotos do local. Além disso, tem também um formulário para o usuário caso ele queira entrar em contato. Tem também telefone e e-mail.",
+    },
     circleOnClick: {
       title: "Circle on Clicks",
-      p1: "Esse projeto é um exercicio comum que é usado durante entrevistas de trabalho, para a posição de junior.",
+      p1: "Esse projeto é um exercício comum que é usado durante entrevistas de trabalho, para a posição de júnior.",
       p2: "O objetivo deste exercício é criar um círculo onde o usuário clicar. Tem também dois botões. Um para Desfazer e outro para Refazer. Além disso, coloquei dois inputs. Um para mudar o tamanho do círculo e o outro para mudar a cor dele.",
     },
     igniteShop: {
       title: "Ignite Shop 2.0",
       p1: "Ignite Shop 2.0 é uma loja online onde vende camisas.",
-      p2: "Os dados dos produtos (camisas) vem da API do Stripe. Todos os produtos estão listados na página home. Também, tem uma página para cada produto, que mostra imagem, nome, descrição e preço. Para fazer o carrinho, foi usado ContextAPI. Ele salva os produtos escolhidos e calcula o total. Além disso, o usuário pode aumentar ou diminuir itens de casa produto direto no carrinho.",
+      p2: "Os dados dos produtos (camisas) vem da API do Stripe. Todos os produtos estão listados na página home. Também, tem uma página para cada produto, que mostra os detalhes. Para fazer o carrinho, foi usado ContextAPI. Já que os dados e funcionalidades são usados em vários componentes.",
     },
     githubBlog: {
       title: "GitHub Blog",
-      p1: "Este projeto é um blog, usando as issues de um repositório como post do blog. O aplicativo consome a API do GitHub para obter os dados.",
-      p2: "Para fazer esta aplicação, foi utilizado React com typescript, Axios, react-hook-form, react-router e outras bibliotecas. O aplicativo mostra os meus dados de perfil usando a API do GitHub, também lista todos as issues(blogs) e mostra na página inicial com um pequeno resumo. Além disso, possui um input para pesquisar uma issue(blog).",
+      p1: "Este projeto é um blog, usando as issues de um repositório como post do blog.",
+      p2: "O aplicativo mostra os meus dados de perfil usando a API do GitHub, também lista todos as issues(blogs) e mostra na página inicial com um pequeno resumo. Além disso, possui um input para pesquisar uma issue(blog).",
     },
     coffeeDelivery: {
       title: "Coffee Delivery",
@@ -53,27 +61,27 @@ const text = {
     },
     dtMoney: {
       title: "DT Money",
-      p1: "DT Money é um aplicativo para listar entradas e saidas. Ele soma tudo e mostra um resumo. Tem apenas 1 página.",
-      p2: "Os dados sobre as transações são salvos em um arquivo json. A biblioteca Json-server e Axios são usados para isso, para imitar um back-end. O usuário pode adicionar uma nova transação usando o botão no cabeçalho. Pode ser uma entrada ou um saida. Ele também pode excluir a transação usando o botão de lixeira que aparecerá ao lado da transação.",
+      p1: "DT Money é um aplicativo para listar entradas e saidas. Ele soma tudo e mostra um resumo.",
+      p2: "Os dados sobre as transações são salvos usando o hook useState. O usuário pode adicionar uma nova transação usando o botão no cabeçalho. Pode ser uma entrada ou um saida. Ele também pode excluir a transação usando o botão de lixeira que aparecerá ao lado de cada transação. Além disso, pode também filtar transações usando o campo de busca.",
     },
     todoList: {
       title: "To Do List",
-      p1: "Este aplicativo consiste em praticar conceitos importantes do React. Usar estado e hooks (UseState e UseEffect). também usar JavaScript vanilla, usando funções de array como filter, map and reduce.",
-      p2: "Apesar de ter poucos recursos, tive que prestar atenção nos conceitos como gerenciamento de estado, imutabilidade, uso do hook certo para alterar o estado (useState ou useEffect), componentização, propriedades e tipos. O código é bem dividido e fácil de entender. Tem alguns componentes e o código está bem escrito. Além disso, o aplicativo é responsivo. Funciona bem na versão mobile.",
-    },
-    galleryWithZoom: {
-      title: "Galeria com zoom",
-      p1: "Galeria com zoom usando apenas JavaScript, HTML e CSS. Nenhum framework ou bibliotecas. Esta galeria é apenas para desktop.",
-      p2: "Este tipo de galeria é muito comum hoje em dia. Dê ao usuário a capacidade de alterar e ampliar a imagem sem um único clique. Basta passar o mouse na miniatura para alterar a imagem principal. Também pode ver um zoom da imagem passando o mouse sobre a imagem.",
+      p1: "Este aplicativo consiste em praticar conceitos importantes do React, como estado e hooks (UseState e UseEffect). também usar JavaScript vanilla, usando funções de array como filter, map and reduce.",
+      p2: "Apesar de ter poucos recursos, tive que prestar atenção nos conceitos como gerenciamento de estado, imutabilidade, uso do hook certo para alterar o estado (useState ou useEffect), componentização, propriedades e tipos. Além disso, o aplicativo é responsivo.",
     },
     rickAndMorty: {
       title: "Rick e Morty API",
-      p1: "Este é um projeto simples. Ele usa a react-query para buscar dados sobre o show de Rick e Morty. Ele lista todos os personagens com seus detalhes.",
-      p2: "A aplicação possui apenas uma página separada em componentes. Começa com um título e subtítulo simples. Além disso, possui um componente de paginação muito amigável que é útil para implementar em projetos futuros. Depois disso, há uma lista dos personagens com seus detalhes, como onde foi visto, nome, status e uma foto. O aplicativo é responsivo. Funciona perfeitamente em tamanhos de tela de celulares.",
+      p1: "Este é um projeto simples. Ele usa a react-query para buscar dados sobre o show de Rick e Morty.",
+      p2: "A aplicação possui apenas uma página separada em componentes. Além disso, possui um componente de paginação muito amigável que é útil para implementar em projetos futuros. Depois disso, há uma lista dos personagens com seus detalhes, como onde foi visto, nome, status e uma foto. O aplicativo é responsivo.",
     },
   },
   english: {
     title: "Personal Projects",
+    pousadaMariart: {
+      title: "Pousada Mariart",
+      p1: "This project is a website for an inn in the city of Resende Costa - MG",
+      p2: "The purpose of this site is to present the inn to those interested. This site contains information about the inn such as location, services provided and photos of the place. In addition, there is also a form for the user if he wants to get in touch. It also has telephone and e-mail.",
+    },
     circleOnClick: {
       title: "Circle on Clicks",
       p1: "This project is a common exercice that is used during front-end jobs interviews, to junior position.",
@@ -82,12 +90,12 @@ const text = {
     igniteShop: {
       title: "Ignite Shop 2.0",
       p1: "Ignite Shop 2.0 is an online store that sells shirts.",
-      p2: "The data about the products (shirts) come from Stripe API. All the products are listed on the home page. Also, there is a page for each product. It shows the image, name, description and price. To do the cart, ContextAPI was used. It saves the chosen products and calculate the total. Also, the user can increase or decrease the quantity of each product in the cart.",
+      p2: "Product data (shirts) comes from the Stripe API. All products are listed on the home page. Also, there is a page for each product, which shows the details. To make the cart, ContextAPI was used. Since data and functionality are used in multiple components.",
     },
     githubBlog: {
       title: "GitHub Blog",
-      p1: "This project is a blog, using the issues of a repository as a post of the blog. The app consume GitHub API to get the data.",
-      p2: "To do this application, was used React with typescript, Axios, react-hook-form, react-router and others libraries. The app show my profile data from GitHub API, It also list all issues and show at home page with a small summary. In addtion, it has an input to search an issue (blog).",
+      p1: "This project is a blog, using the issues of a repository as a post of the blog.",
+      p2: "The app show my profile data from GitHub API, It also list all issues and show at home page with a small summary. In addtion, it has an input to search an issue (blog).",
     },
     coffeeDelivery: {
       title: "Coffee Delivery",
@@ -96,23 +104,18 @@ const text = {
     },
     dtMoney: {
       title: "DT Money",
-      p1: "DT Money is an application to list incomes and outcomes. It sums all of it and show a summary. It has only 1 page.",
-      p2: "The data about transactions is saved in a json file. Json-server library and Axios are used for it, to mimicry a back-end. The user can add a new transaction using the button on the header. It can be an income or outcome. He can also delete the transaction using the trash button that will display beside the transaction.",
+      p1: "DT Money is an application to list incomes and outcomes. It sums all of it and show a summary.",
+      p2: "The Data about transactions is saved using the useState hook. User can add a new transaction using the button in the header. It can be an income or an outcome. He can also delete the transaction using the trash can button that will appear next to each transaction. In addition, you can also filter transactions using the search field.",
     },
     todoList: {
       title: "To Do List",
-      p1: "This app consist in practice the important concepts of React. Use State and hooks (UseState and UseEffect). Also work with vanilla JavaScript, using array functions like filter, map and reduce.",
-      p2: "Despite having few features, I had to pay attetion of concepts like state managment, state immutability, use the right hook to change the state (useState or useEffect) , componentization, propeties and types. The code is well divided and easy to understand. Have a few components and code is well written. Also, the application is responsive. It Works well in the mobile version.",
-    },
-    galleryWithZoom: {
-      title: "Gallery with zoom",
-      p1: "Gallery with zoom using JavaScript, HTML and CSS only. No framework or libraries. This gallery is for desktop only.",
-      p2: "This kind of gallery is very common nowdays. Give the user the abilaty to change and zoon the image without a single click. Just have to hover in the thumbnail to change the main image. Also can see a zoom of the image by hovering over the image.",
+      p1: "This app consist in practice the important concepts of React, like State and hooks (UseState and UseEffect). Also work with vanilla JavaScript, using array functions like filter, map and reduce.",
+      p2: "Despite having few features, I had to pay attetion of concepts like state managment, state immutability, use the right hook to change the state (useState or useEffect) , componentization, propeties and types. Also, the application is responsive.",
     },
     rickAndMorty: {
       title: "Rick and Morty API",
-      p1: "This is a simple project. It uses react query to fetch data about Rick and Morty show. It list all characters with its details.",
-      p2: "The application have only one page separated in components. Starts with a simple title and subtitle. Also, it has a very friendly pagination component that is useful to implement in futures projects. After that, there is a list of the characters with its details, like where was seen, name, status and a picture. The application is responsive. Works perfectly on mobiles screen sizes.",
+      p1: "This is a simple project. It uses react query to fetch data about Rick and Morty show.",
+      p2: "The application have only one page separated in components. Starts with a simple title and subtitle. Also, it has a very friendly pagination component that is useful to implement in futures projects. After that, there is a list of the characters with its details, like where was seen, name, status and a picture. The application is responsive.",
     },
   },
 };
@@ -135,16 +138,18 @@ const PersonalProjects = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+
+
         <SwiperSlide>
           <SwiperContent>
             <ImageSwiper>
-              <img src={circleOnClickImg} alt="" />
+              <img src={pousadaMariartImg} alt="" />
             </ImageSwiper>
 
             <TextSwiper>
-              <h3>{text[language].circleOnClick.title}</h3>
-              <p>{text[language].circleOnClick.p1}</p>
-              <p>{text[language].circleOnClick.p2}</p>
+              <h3>{text[language].pousadaMariart.title}</h3>
+              <p>{text[language].pousadaMariart.p1}</p>
+              <p>{text[language].pousadaMariart.p2}</p>
 
               <div>
                 <h3>
@@ -155,18 +160,31 @@ const PersonalProjects = () => {
                 <br />
                 <ul>
                   <li>ReactJs</li>
-                  <li>CSS</li>
-                  <li>HTML</li>
                   <li>TypeScript</li>
                   <li>JavaScript</li>
+                  <li>HTML</li>
+                  <li>CSS</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Circles-on-click"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://www.pousadamariart.com.br/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Pousada-Mariart"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -190,25 +208,38 @@ const PersonalProjects = () => {
                 </h3>
                 <br />
                 <ul>
-                  <li>ReactJs</li>
                   <li>NextJs</li>
                   <li>TypeScript</li>
                   <li>Axios</li>
-                  <li>CSS (Stitches)</li>
-                  <li>HTML</li>
                   <li>Stripe</li>
-                  <li>Keen Slider</li>
+                  <li>HTML</li>
+                  <li>CSS (Stitches)</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Challenge-04-Ignite-2022-Ignite-Shop-2.0"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://ignite-shop-2-0-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Challenge-04-Ignite-2022-Ignite-Shop-2.0"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
+
+
 
         <SwiperSlide>
           <SwiperContent>
@@ -232,16 +263,29 @@ const PersonalProjects = () => {
                   <li>ReactJs</li>
                   <li>TypeScript</li>
                   <li>Axios</li>
-                  <li>CSS (Styled Components)</li>
                   <li>HTML</li>
+                  <li>CSS (Styled Components)</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Challenge-03-Ignite-2022-GitHub-Blog"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://git-hub-blog-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Challenge-03-Ignite-2022-GitHub-Blog"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -266,17 +310,30 @@ const PersonalProjects = () => {
                 <br />
                 <ul>
                   <li>ReactJs</li>
+                  <li>TypeScript</li>
                   <li>HTML</li>
                   <li>CSS (Styled Components)</li>
-                  <li>TypeScript</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Challenge-02-Ignite-2022-coffe-delivery"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://coffe-delivery-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Challenge-02-Ignite-2022-coffe-delivery"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -302,13 +359,29 @@ const PersonalProjects = () => {
                 <ul>
                   <li>ReactJs</li>
                   <li>TypeScript</li>
-                  <li>CSS (Styled Components)</li>
                   <li>HTML</li>
+                  <li>CSS (Styled Components)</li>
                 </ul>
               </div>
-              <a href="https://github.com/Vinicius-PR/DT-Money" target="_blank">
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://dt-money-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/DT-Money"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -333,17 +406,30 @@ const PersonalProjects = () => {
                 <br />
                 <ul>
                   <li>ReactJs</li>
+                  <li>TypeScript</li>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>TypeScript</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Challenge-01-Ignite-2022-To-do-List"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://to-do-list-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Challenge-01-Ignite-2022-To-do-List"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -351,13 +437,13 @@ const PersonalProjects = () => {
         <SwiperSlide>
           <SwiperContent>
             <ImageSwiper>
-              <img src={galleryWithZoomImg} alt="" />
+              <img src={circleOnClickImg} alt="" />
             </ImageSwiper>
 
             <TextSwiper>
-              <h3>{text[language].galleryWithZoom.title}</h3>
-              <p>{text[language].galleryWithZoom.p1}</p>
-              <p>{text[language].galleryWithZoom.p2}</p>
+              <h3>{text[language].circleOnClick.title}</h3>
+              <p>{text[language].circleOnClick.p1}</p>
+              <p>{text[language].circleOnClick.p2}</p>
 
               <div>
                 <h3>
@@ -367,17 +453,31 @@ const PersonalProjects = () => {
                 </h3>
                 <br />
                 <ul>
+                  <li>ReactJs</li>
+                  <li>TypeScript</li>
                   <li>HTML</li>
                   <li>CSS</li>
-                  <li>TypeScript</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Gallery-with-zoom"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://circles-on-click.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Circles-on-click"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>
@@ -401,19 +501,31 @@ const PersonalProjects = () => {
                 </h3>
                 <br />
                 <ul>
+                  <li>React</li>
+                  <li>JavaScript</li>
                   <li>HTML</li>
                   <li>CSS (StyledComponents)</li>
-                  <li>JavaScript</li>
-                  <li>React</li>
-                  <li>React Query</li>
                 </ul>
               </div>
-              <a
-                href="https://github.com/Vinicius-PR/Rick_and_Morty_API"
-                target="_blank"
-              >
-                Go to repo
-              </a>
+
+              <LinksContainer>
+                <a
+                  href="https://rick-and-morty-api-vinicius-pr.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/Rick_and_Morty_API"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
             </TextSwiper>
           </SwiperContent>
         </SwiperSlide>

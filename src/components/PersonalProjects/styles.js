@@ -5,24 +5,6 @@ export const PersonalProContainer = styled.div`
   margin: 0 auto;
   position: relative;
 
-  a {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
-    color: white;
-    background-color: gray;
-    padding: 1rem;
-    border-radius: 16px;
-    transition: filter 0.2s;
-    width: 10rem;
-    margin: 0 auto;
-  }
-
-  a:hover {
-    filter: brightness(0.8);
-  }
-
   #personal-projects {
     position: absolute;
     @media (max-width: 768px) {
@@ -84,3 +66,40 @@ export const TextSwiper = styled.div`
     width: 100%;
   }
 `;
+
+export const LinksContainer = styled.div`
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  a:first-child {
+    color: white;
+    background-color: darkgreen;
+  }
+
+  a:last-child {
+    color: white;
+    background-color: gray;
+  }
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+
+    padding: 1rem 1.5rem;
+    border-radius: 16px;
+    transition: filter 0.2s;
+    margin: 0.25rem auto;
+
+    &:hover {
+      filter: brightness(0.8);
+    }
+  }
+`

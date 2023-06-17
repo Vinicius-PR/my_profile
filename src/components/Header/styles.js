@@ -49,7 +49,6 @@ export const Main = styled.div`
     width: 100vw;
     height: 100vh;
     position: fixed;
-    padding-top: 90px;
     transform: translate(${(props) => (props.isMenuOpen ? "100%" : "0")});
     transition: transform 0.3s ease-in;
     font-weight: 800;
