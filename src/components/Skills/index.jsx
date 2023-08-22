@@ -11,7 +11,6 @@ import sassImg from "../../assets/skills/sass.png";
 import pythonImg from "../../assets/skills/python.png";
 import styledComponents from "../../assets/skills/styledComponents.png";
 
-import phpImg from "../../assets/skills/php.png";
 import typeImg from "../../assets/skills/typescript.png";
 import nodeImg from "../../assets/skills/node-js.png";
 import reduxImg from "../../assets/skills/redux.png";

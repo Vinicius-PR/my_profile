@@ -18,10 +18,11 @@ import {
 } from "./styles";
 import LanguageContext from "../../context/Language";
 import { useContext } from "react";
-import { GoRepo } from 'react-icons/go'
-import { LuAppWindow } from 'react-icons/lu'
+import { GoRepo } from 'react-icons/go';
+import { LuAppWindow } from 'react-icons/lu';
 
 // Images used on Slides
+import memoryGameImg from "../../assets/personal projects screenshots/memoryGame.png";
 import pousadaMariartImg from "../../assets/personal projects screenshots/pousadaMariart.png";
 import circleOnClickImg from "../../assets/personal projects screenshots/circleOnClick.png";
 import igniteShopImg from "../../assets/personal projects screenshots/igniteShop.png";
@@ -34,6 +35,11 @@ import rickAndMortyImg from "../../assets/personal projects screenshots/rickAndM
 const text = {
   portuguese: {
     title: "Projetos Pessoais",
+    memoryGame: {
+      title: "Memory Game",
+      p1: "Esse projeto é a solução de um desafio nivel avançado do site Frontend Mentor",
+      p2: "O objetivo desse projeto é criar um jogo de memória. O usuário terá a opção de escolher o estilos do jogo, numero de jogadores e o tamanho do jogo. No final mostrará o resultado.",
+    },
     pousadaMariart: {
       title: "Pousada Mariart",
       p1: "Esse projeto é um site de uma pousada na cidade de Resende Costa - MG.",
@@ -77,6 +83,11 @@ const text = {
   },
   english: {
     title: "Personal Projects",
+    memoryGame: {
+      title: "Memory Game",
+      p1: "This project is the solution to an advanced level challenge from the Frontend Mentor website",
+      p2: "The aim of this project is to create a memory game. The user will have the option to choose the style of the game, number of players and the size of the game. At the end it will show the result.",
+    },
     pousadaMariart: {
       title: "Pousada Mariart",
       p1: "This project is a website for an inn in the city of Resende Costa - MG",
@@ -138,6 +149,54 @@ const PersonalProjects = () => {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+
+        <SwiperSlide>
+          <SwiperContent>
+            <ImageSwiper>
+              <img src={memoryGameImg} alt="" />
+            </ImageSwiper>
+
+            <TextSwiper>
+              <h3>{text[language].memoryGame.title}</h3>
+              <p>{text[language].memoryGame.p1}</p>
+              <p>{text[language].memoryGame.p2}</p>
+
+              <div>
+                <h3>
+                  {language === "english"
+                    ? "Technolages used"
+                    : "Tecnologias Usadas"}
+                </h3>
+                <br />
+                <ul>
+                  <li>ReactJs</li>
+                  <li>TypeScript</li>
+                  <li>HTML</li>
+                  <li>SCSS</li>
+                </ul>
+              </div>
+
+              <LinksContainer>
+                <a
+                  href="https://memory-game-nu-seven.vercel.app/"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Check the App" : "Ver App"}
+                  <LuAppWindow />
+                </a>
+
+                <a
+                  href="https://github.com/Vinicius-PR/memory-game"
+                  target="_blank" rel="noreferrer"
+                >
+                  {language === "english" ? "Go to repo" : "Ver Repo"}
+                  <GoRepo />
+                </a>
+              </LinksContainer>
+
+            </TextSwiper>
+          </SwiperContent>
+        </SwiperSlide>
 
 
         <SwiperSlide>
